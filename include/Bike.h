@@ -14,7 +14,7 @@ class Bike: public Vehicle{
     public:
 
         Bike();
-        Bike( const string plate, int id,  bool electric, int rentDays);
+        Bike(string fileLine, int rentdays);
 
 
         //override

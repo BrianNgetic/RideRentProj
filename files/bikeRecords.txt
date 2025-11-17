@@ -1,0 +1,6 @@
+201,Trek FX3,BK1100,false,15.99
+202,Giant Escape 3,BK2233,false,14.50
+203,RadRunner Plus,BK4455,true,22.99
+204,Specialized Sirrus,BK5566,false,17.25
+205,Lectric XP 3.0,BK7788,true,20.00
+206,Cannondale Quick,BK8899,false,13.99

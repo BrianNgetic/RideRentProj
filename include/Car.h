@@ -12,7 +12,7 @@ class Car: public Vehicle{
 
     public:
         Car(); //default constructor
-        Car( const string plate, int id, string type,  bool luxury, int rentDays);
+        Car(string fileLine, int rentDays);
 
         double computeCharge() const override;
         string info() const override;

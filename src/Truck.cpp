@@ -6,11 +6,28 @@ using namespace std;
 
 
 Truck::Truck() : Vehicle(),  payloadTons(0.0) {};
-Truck::Truck( const string plate, int id,  double payloadTons, int rentDays){
-    this->plate = plate;
-    this->id = id;
-    this->payloadTons = payloadTons;
-    this->rentDays = rentDays;
+Truck::Truck( string fileLine, int rentdays){
+    // this->plate = plate;
+    // this->id = id;
+    // this->payloadTons = payloadTons;
+    // this->rentDays = rentDays;
+   vector<string> data = split(fileLine, ","); //get each line 
+
+   //values from the file
+   this->id = stoi(data[0]);
+   this->name = data[1];
+   this->plate = data[2];
+   this->payloadTons = stod(data[3]);
+   this->dailyRate = stod(data[4]);
+
+
+
+   //from the user
+   this->rentDays = rentDays;
+
+
+
+
 }
 
 double Truck::computeCharge()const {

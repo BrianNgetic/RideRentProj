@@ -7,7 +7,9 @@ using namespace std;
 class Vehicle{
     protected:
         
-        string plate;
+        
+   string name; 
+    string plate;
        
         int id;
         int dailyRate;
@@ -20,7 +22,7 @@ class Vehicle{
 
     public:
         Vehicle(); //default constructor
-        Vehicle(const string& type, string&  plate, int id, int rentDays);
+        Vehicle(string fileLine);
         virtual ~Vehicle();
 
         virtual double computeCharge() const = 0; //pure virtual

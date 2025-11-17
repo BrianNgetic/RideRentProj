@@ -7,11 +7,25 @@ using namespace std;
 
 Bike::Bike() : Vehicle(),  electric(false){};
 
-Bike::Bike( const string plate, int id, bool electric , int rentDays){
-    this->plate = plate;
-    this->id = id;
-    this->rentDays = rentDays;
-    this->electric = electric;
+Bike::Bike( string fileLine, int rentDays){
+    // this->plate = plate;
+    // this->id = id;
+    // this->rentDays = rentDays;
+    // this->electric = electric;
+
+    stringstream ss(fileLine);
+    string temp;
+
+    vector<string> data = split(fileLine, ",");
+
+    this->id = stoi(data[0]);
+   this->name = data[1];
+   this->plate = data[2];
+   this->electric = (data[3] == "true"  || data[3] = "1");
+   this->dailyRate = stod(data[4]);
+
+     this->rentDays = rentDays;
+    
 
  
 

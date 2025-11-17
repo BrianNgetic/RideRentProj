@@ -1,0 +1,6 @@
+101,Toyota Corolla,TX1234,false,45.99
+102,Honda Civic,HC9988,false,42.50
+103,BMW M5,BM5511,true,129.99
+104,Mercedes C300,MC3000,true,119.50
+105,Ford Mustang,FM8765,false,69.99
+106,Chevrolet Tahoe,CH5588,false,89.99

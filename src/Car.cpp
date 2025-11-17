@@ -2,18 +2,33 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <vector>
 using namespace std;
 
 
 Car::Car() : Vehicle(),   luxury(false){}
 
-Car::Car(const  string plate, int id,  string type, bool luxury, int rentDays){
- 
-    this->plate = plate;
-    this->id = id;
-    this->type = type;
-    this->luxury = luxury;
-    this->rentDays = rentDays;
+Car::Car(string fileLine, int rentDays){
+    // this->plate = plate;
+    // this->id = id;
+    // this->type = type;
+    // this->luxury = luxury;
+    // this->rentDays = rentDays;
+
+   vector<string> data = split(fileLine, ",");
+
+   //values from the file
+   this->id = stoi(data[0]);
+   this->name = data[1];
+   this->plate = data[2];
+   this->luxury = (data[3] == "true"  || data[3] = "1");
+   this->dailyRate = stod(data[4]);
+
+
+
+   //from the user
+   this->rentDays = rentDays;
+    
 
 }
 

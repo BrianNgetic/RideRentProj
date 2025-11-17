@@ -11,7 +11,9 @@ class Truck: public Vehicle{
 
     public:
         Truck();
-        Truck(const string plate, int id,  double payloadTons, int rentDays);
+        Truck(string fileLine, int rentdays);
+
+       
 
         double computeCharge() const override;
         string info() const override;
